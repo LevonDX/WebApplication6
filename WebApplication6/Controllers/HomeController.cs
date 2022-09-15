@@ -15,9 +15,8 @@ namespace WebApplication6.Controllers
 
         public IActionResult Index()
         {
-            return View(FoodData.GetFoods().ToList());
+            return View();
         }
-
         public IActionResult Privacy()
         {
             return View();

@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using WebApplication6.Data;
+
 namespace WebApplication6
 {
     public class Program
@@ -6,8 +9,11 @@ namespace WebApplication6
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            // Add services to the containebrr.
             builder.Services.AddControllersWithViews();
+            
+            builder.Services.AddDbContext<FoodDbContext>(options =>
+                options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
 
             var app = builder.Build();
 

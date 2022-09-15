@@ -20,7 +20,7 @@ namespace WebApplication6
         */
 
 
-        public static IEnumerable<Food> GetFoods()
+      /*  public static IEnumerable<Food> GetFoods()
         {
             using (StreamReader sr = new StreamReader(@"C:\Users\lehovhan\source\repos\WebApplication6\WebApplication6\Repository\Food.txt"))
             {
@@ -41,6 +41,8 @@ namespace WebApplication6
                     yield return food;
                 }
             }
-        }
+        } */
+
+            
     }
 }

@@ -1,0 +1,21 @@
+﻿@using WebApplication6.Data.Entities
+@model List<Food>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table">
+    <thead>
+        @foreach (Food item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(i=>item.Name)</td>
+                <td>@Html.DisplayFor(i=>item.ExpiationDate)</td>
+                <td>@Html.DisplayFor(i=>item.Price)</td>
+                <td>@Html.DisplayFor(i=>item.Quantity)</td>
+            </tr>
+                           
+        }
+    </thead>
+</table>
