@@ -14,6 +14,12 @@
                 <td>@Html.DisplayFor(i=>item.ExpiationDate)</td>
                 <td>@Html.DisplayFor(i=>item.Price)</td>
                 <td>@Html.DisplayFor(i=>item.Quantity)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id=@item.ID>Edit</a> 
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id=@item.ID>Delete</a>
+                </td>
             </tr>
                            
         }

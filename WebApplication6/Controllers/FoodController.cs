@@ -20,5 +20,23 @@ namespace WebApplication6.Controllers
 
             return View(foods);
         }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            Food food = _foodDbContext.Foods.Find(id)!;
+
+            return View(food);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(Food food)
+        {
+            _foodDbContext.Foods.Update(food);
+            
+            await _foodDbContext.SaveChangesAsync();
+
+            return RedirectToAction("Index");
+        }
     }
 }

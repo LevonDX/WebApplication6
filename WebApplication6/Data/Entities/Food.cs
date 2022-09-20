@@ -26,7 +26,6 @@ namespace WebApplication6.Data.Entities
         [Required]
         public decimal Price { get; set; }
 
-
         public string? ExpiationDate { get; set; }
 
         public int? Quantity { get; set; }
